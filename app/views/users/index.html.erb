@@ -1,0 +1,54 @@
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>
+
+	 
+<p><h1>Learn the details of national and locan elections</h1></P>
+<p>
+<h2> Click <a href="http://www.sbe.virginia.gov/cms/Voter_Information/Index.html">here</a> to access the state of Virginia's website to answer your questions on your local elections. </h2>
+</p>
+
+<h2> Click <a href="http://www.govtrack.us/congress/findyourreps.xpd">here</a> to use the G0vTrack.us website to answer your questions on the electorial process. Or <a href="http://www.govtrack.us/">here</a> to search for details on the state of Virginia <h2>
+
+
+
+<p>
+<h2> Click <a href="http://www.sbe.virginia.gov/cms/GoogleGadget.html">here</a>Virginia google gadget </h2>
+</p>
+
+
+
+<p><iframe width="425" height="300" frameborder="0"
+ scrolling="no" marginheight="0" marginwidth="0"
+ src="http://www.govtrack.us/embed/mapframe.xpd?state=VA&bounds=-84.70458984375,40.27952566881291,-71.52099609375,35.460669951495305"></iframe>
+ </p>
+ 
+  <p>Another resource that can be of assistance in seeking details of the overall electorial process and activities of members of congress is the  <a href="http://www.votesmart.org/">  Project Vote Smart wesite.</a>
+  </P>
+ <!-- BEGIN VOTESMART WIDGET -->
+<script type="text/javascript" src="http://votesmart.org/js/widgets/search/js/jquery-1.2.6.min.js"></script><script type="text/javascript" src="http://votesmart.org/js/widgets/search/js/init.search1.js"></script><div id="pvs_search"><a href="http://votesmart.org">Project Vote Smart</a> - Search Candidates, Elections and Officials<br /><br />Javascript must be enabled.</div>
+<!-- END VOTESMART WIDGET -->
+</p>
+
